@@ -1,31 +1,29 @@
-function add() {
 
-  var result = parseInt(document.getElementById('num1').value) + parseInt(document.getElementById('num2').value);
-  append(result);
-  return result;
-}
-function subtract() {
+  function append(answer) {
+    var result = document.getElementById("result");
+    result.innerHTML = answer;
+  }
 
-  var result = parseInt(document.getElementById('num1').value) - parseInt(document.getElementById('num2').value);
-  append(result);
-  return result;
-}
-function multiply() {
+  function getValue(id) {
+    return parseInt(document.getElementById(id).value);
+  }
+  function add() {
+    var result = getValue("num1") + getValue("num2");
+    append(result);
+  }
 
-  var result = parseInt(document.getElementById('num1').value) * parseInt(document.getElementById('num2').value);
-  append(result);
-  return result;
-}
-function divide() {
+  function subtract() {
+    var result = getValue("num1") - getValue("num2");
+    append(result)
+  }
 
-  var result = parseInt(document.getElementById('num1').value) / parseInt(document.getElementById('num2').value);
-  append(result);
-  return result;
-}
+  function multiply() {
+    var result = getValue("num1") + getValue("num2");
+    append(result);
 
+  }
+  function divide() {
+    var result = getValue("num1") / getValue("num2");
+    append(result);
 
-
-function append(answer) {
-  var result = document.getElementById("result");
-  result.innerHTML = answer;
-}
+  }
